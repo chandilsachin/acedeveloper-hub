@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ace Developer — Apps by Sachin Chandil</title>
+<meta name="description" content="Small, focused apps for everyday life: KhaanaKya, Pomo and Arthik. Made by Sachin Chandil.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ace Developer — Apps by Sachin Chandil">
+<meta property="og:description" content="Small, focused apps for everyday life.">
+<meta property="og:url" content="https://acedeveloper.in/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171717'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='700' font-size='38' text-anchor='middle' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF8; --card: #FFFFFF; --border: #E7E5E0; --ink: #171717; --muted: #5B5B57;
+    --chip: #F1F0EC; --accent: #171717; --accent-ink: #FFFFFF; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111110; --card: #1A1A19; --border: #2C2C2A; --ink: #F2F2EF; --muted: #A3A39E;
+      --chip: #252523; --accent: #F2F2EF; --accent-ink: #111110; --shadow: none; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 960px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+
+  header.wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; padding-bottom: 24px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; text-decoration: none; letter-spacing: -.01em; }
+  .logo b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); font-size: 18px; }
+  header nav a { font-weight: 500; font-size: 15px; color: var(--muted); text-decoration: none; }
+  header nav a:hover { color: var(--ink); }
+
+  .intro { padding-top: 48px; padding-bottom: 40px; max-width: 680px; }
+  .intro h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.08; letter-spacing: -.025em; margin: 0 0 16px; font-weight: 800; }
+  .intro p { font-size: 18px; color: var(--muted); margin: 0; }
+
+  .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding-bottom: 72px; }
+  .app { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .app-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .app-head img { width: 64px; height: 64px; border-radius: 15px; flex: none; }
+  .app h2 { font-size: 20px; margin: 0; line-height: 1.2; letter-spacing: -.01em; }
+  .app .kind { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .app p { margin: 0 0 18px; color: var(--muted); font-size: 15px; flex: 1; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+  .chips span { font-size: 12px; font-weight: 600; background: var(--chip); border-radius: 999px; padding: 4px 10px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 14px; text-decoration: none; padding: 9px 14px; border-radius: 10px; border: 1px solid var(--border); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn:hover { opacity: .85; }
+
+  footer { border-top: 1px solid var(--border); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 24px; padding-bottom: 40px; font-size: 14px; color: var(--muted); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a class="logo" href="./"><b>A</b>Ace Developer</a>
+  <nav><a href="https://me.acedeveloper.in/">About me</a></nav>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>Small apps for everyday life.</h1>
+    <p>I'm Sachin Chandil, an app developer. I build focused, private apps that each solve one everyday problem well.</p>
+  </section>
+
+  <section class="apps" aria-label="Apps">
+    <article class="app">
+      <div class="app-head">
+        <img src="assets/khaanakya.webp" width="64" height="64" alt="">
+        <div><h2>KhaanaKya</h2><div class="kind">Food &amp; drink</div></div>
+      </div>
+      <p>Your family's daily menu. Keep every dish your household cooks in one place and decide what to cook in one tap.</p>
+      <div class="chips"><span>Android</span><span>iPhone · soon</span></div>
+      <div class="actions">
+        <a class="btn primary" href="https://khaanakya.acedeveloper.in/">Visit website</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=ace.developer.khaanakya">Google Play</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="app-head">
+        <img src="assets/pomo.webp" width="64" height="64" alt="">
+        <div><h2>Pomo</h2><div class="kind">Focus &amp; task timer</div></div>
+      </div>
+      <p>A Pomodoro timer that helps you work in focused intervals, track your sessions and build a daily habit you'll stick to.</p>
+      <div class="chips"><span>Android</span></div>
+      <div class="actions">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=ace.developer.pomo">Google Play</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="app-head">
+        <img src="assets/arthik.webp" width="64" height="64" alt="">
+        <div><h2>Arthik</h2><div class="kind">Net worth tracker</div></div>
+      </div>
+      <p>Track your assets, liabilities, investments and expenses in one place, and plan your way to financial independence.</p>
+      <div class="chips"><span>Android</span></div>
+      <div class="actions">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=ace.developer.befi">Google Play</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sachin Chandil</span>
+    <span><a href="https://me.acedeveloper.in/">About me</a> · <a href="mailto:chandilsachin@gmail.com">Contact</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
